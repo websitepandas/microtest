@@ -1,0 +1,16 @@
+/* LogoCarousel.css */
+
+/* Customize the appearance of each slide */
+.slick-slide > div {
+	background-color: #79cf17; /* Change background color as needed */
+	border: #79cf17 1px solid;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	padding: 25px;
+	text-align: center;
+	margin: 0 10px;
+}
+
+.slick-dots li.slick-active button:before {
+	color: #1890ff; /* Change color as needed */
+}
