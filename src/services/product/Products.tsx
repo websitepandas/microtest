@@ -1,11 +1,9 @@
 import { useGetProductByNameQuery } from '../product';
 import { useGetCategoryByNameQuery } from '../categories';
 import { Col, Row, Card } from 'antd';
-import { setProductLength } from '../../store/productSlice';
-import { useDispatch } from 'react-redux';
+
 const { Meta } = Card;
 const Products = () => {
-	const dispatch = useDispatch();
 	const {
 		data: products,
 		error: productsError,
@@ -17,13 +15,10 @@ const Products = () => {
 		isLoading: categoriesLoading,
 	} = useGetCategoryByNameQuery();
 
-	// console.log(categories, 'categories');
-	// console.log(products, 'products');
 	if (productsLoading || categoriesLoading) {
 		return <div>Loading...</div>;
 	}
 
-	// Handle errors
 	if (productsError) {
 		return <div>Error fetching products: {getErrorMessage(productsError)}</div>;
 	}
@@ -37,8 +32,7 @@ const Products = () => {
 	if (!categories) {
 		return <div>No categories available</div>;
 	}
-	console.log(products.length, 'heeee');
-	dispatch(setProductLength(products.length));
+
 	return (
 		<>
 			<Row gutter={40}>

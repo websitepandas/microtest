@@ -2,12 +2,12 @@ import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { fakeStoreProductsAPI } from '../services/product';
 import { fakeStoreCategoryAPI } from '../services/categories';
-import productReducer from './productSlice';
+
 //import productsReducer from '../slices/productsSlice';
 export const store = configureStore({
 	reducer: {
 		// Add the generated reducer as a specific top-level slice
-		product: productReducer,
+
 		[fakeStoreProductsAPI.reducerPath]: fakeStoreProductsAPI.reducer,
 		[fakeStoreCategoryAPI.reducerPath]: fakeStoreCategoryAPI.reducer,
 	},
