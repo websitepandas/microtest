@@ -14,6 +14,7 @@ import FeatureData from '../Common/FeatureData';
 import { FooterLayout } from '../Common/FooterLayout';
 import { BODY, HEADER } from '../Common/constant';
 import LogoCarousel from '../Common/LogoCarousel';
+import Model from '../Common/Model';
 
 const { Header, Footer, Content } = Layout;
 
@@ -25,7 +26,14 @@ const Home: React.FC = () => {
 			<Layout style={layoutStyle}>
 				<Header style={headerLogoStyle}>{HEADER.LOGO_TEXT}</Header>
 				<Header style={headerMenuStyle}>
-					<HeaderMenu />
+					<Flex>
+						<div style={{ border: '1px solid #000', width: '95%' }}>
+							<HeaderMenu />
+						</div>
+						<div>
+							<Model />
+						</div>
+					</Flex>
 				</Header>
 				<Content style={{ padding: '0 48px', margin: '20px 0' }}>
 					<Slider />

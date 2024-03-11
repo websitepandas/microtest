@@ -6,7 +6,7 @@ const Model: React.FC = () => {
 
 	return (
 		<>
-			<Button type="primary" onClick={() => setOpen(true)}>
+			<Button onClick={() => setOpen(true)}>
 				<FacebookOutlined />
 			</Button>
 			<Modal
