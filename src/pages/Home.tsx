@@ -27,7 +27,7 @@ const Home: React.FC = () => {
 				<Header style={headerLogoStyle}>{HEADER.LOGO_TEXT}</Header>
 				<Header style={headerMenuStyle}>
 					<Flex>
-						<div style={{ border: '1px solid #000', width: '95%' }}>
+						<div style={{ width: '95%' }}>
 							<HeaderMenu />
 						</div>
 						<div>

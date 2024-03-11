@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Flex, Typography, Row, Col } from 'antd';
 import HeaderMenu from '../Common/HeaderMenu';
-
+import Model from '../Common/Model';
 import Slider from '../Common/Slider';
 import {
 	layoutStyle,
@@ -24,7 +24,14 @@ const Company: React.FC = () => {
 			<Layout style={layoutStyle}>
 				<Header style={headerLogoStyle}>{HEADER.LOGO_TEXT}</Header>
 				<Header style={headerMenuStyle}>
-					<HeaderMenu />
+					<Flex>
+						<div style={{ width: '95%' }}>
+							<HeaderMenu />
+						</div>
+						<div>
+							<Model />
+						</div>
+					</Flex>
 				</Header>
 				<Content style={{ padding: '0 48px', margin: '20px 0' }}>
 					<Slider />

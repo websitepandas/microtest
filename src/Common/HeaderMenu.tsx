@@ -41,7 +41,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ mode = 'horizontal' }) => {
 					Company
 				</a>
 			),
-			key: 'alipay',
+			key: 'Company',
 		},
 		{
 			label: (
@@ -49,7 +49,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ mode = 'horizontal' }) => {
 					Contact
 				</a>
 			),
-			key: 'alipay',
+			key: 'contact',
 		},
 	];
 
