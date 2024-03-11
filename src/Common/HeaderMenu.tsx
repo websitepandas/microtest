@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Menu } from 'antd';
+import { Flex, Menu } from 'antd';
 // import { useSelector } from 'react-redux';
 // import { selectProductLength } from '../store/productSlice';
 import { useGetProductByNameQuery } from '../services/product';
+import Model from './Model';
+
 interface MenuItem {
 	label: React.ReactNode;
 	key: string;
@@ -59,11 +61,18 @@ const HeaderMenu: React.FC<HeaderMenuProps> = ({ mode = 'horizontal' }) => {
 
 	return (
 		<>
-			<Menu onClick={onClick} selectedKeys={[current]} mode={mode}>
-				{items.map((item) => (
-					<Menu.Item key={item.key}>{item.label}</Menu.Item>
-				))}
-			</Menu>
+			<Flex>
+				<div style={{ border: '1px solid #000', width: '95%' }}>
+					<Menu onClick={onClick} selectedKeys={[current]} mode={mode}>
+						{items.map((item) => (
+							<Menu.Item key={item.key}>{item.label}</Menu.Item>
+						))}
+					</Menu>
+				</div>
+				<div>
+					<Model />
+				</div>
+			</Flex>
 		</>
 	);
 };
